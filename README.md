@@ -3,7 +3,7 @@
 # Installation
 in your BitBar folder
 
-`npm i francescogior/github-bitbar-counter && cd github-bitbar-counter && npm i`
+`git clone https://github.com/francescogior/github-bitbar-counter && cd github-bitbar-counter && npm i`
 
 # Create plugins
 Add a js plugin in your BitBar folder
