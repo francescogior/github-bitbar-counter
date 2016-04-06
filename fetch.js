@@ -1,7 +1,7 @@
 import request from 'request'
 
 const fetchOne = (endpoint) => new Promise((resolve, reject) => {
-  request.get({url: endpoint }, (error, response, body) => {
+  request.get({url: endpoint, headers: { 'User-Agent': 'github-bitbar-counter' } }, (error, response, body) => {
     if (error) {
       reject(error)
     }
