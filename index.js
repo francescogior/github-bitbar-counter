@@ -7,6 +7,6 @@ const GithubBitbarCounter = require('./github-bitbar-counter').default;
 
 module.exports = function(config) {
   return function() {
-    return GithubBitbarCounter(config)(...[...arguments])
+    return GithubBitbarCounter(config).apply(undefined, [].concat(Array.prototype.slice.call(arguments)));
   }
 }
