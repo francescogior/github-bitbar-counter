@@ -27,7 +27,7 @@ GithubBitbarCounter({
   enterprise: true,
   assignee: 'francescogior',
   type: 'issue',
-  repo: 'buildo/aliniq',
+  repo: 'buildo/lol',
   state: 'open',
   labelsIn: [],
   labelsOut: ['macro', 'in review'],
@@ -37,7 +37,7 @@ GithubBitbarCounter({
   enterprise: true,
   assignee: 'francescogior',
   type: 'issue',
-  repo: 'buildo/aliniq',
+  repo: 'buildo/lol',
   state: 'open',
   labelsIn: []
 }, {
@@ -45,7 +45,7 @@ GithubBitbarCounter({
   enterprise: true,
   assignee: 'francescogior',
   type: 'pr',
-  repo: 'buildo/aliniq',
+  repo: 'buildo/lol',
   state: 'open',
   labelsIn: []
 })
