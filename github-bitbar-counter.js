@@ -42,7 +42,7 @@ export default (config) => (...githubQueries) => {
   )
 
   const showHeader = (...results) => ({
-    text: results.map(r => r.total_count).join('/'),
+    text: results.map(r => r.total_count).join(' | '),
     emojize: true,
     color: BLUE,
     image: GITHUB_ICON,
