@@ -9,5 +9,8 @@ export const toGHSearchQueryString = obj => flatten(map(obj, (value, key) => {
   if (key === 'labelsOut') {
     return value.map(label => `-label:"${label}"`)
   }
+  if (key === 'milestone' && value === null) {
+    return `no:milestone`;
+  }
   return `${key}:"${value}"`
 })).join('+')

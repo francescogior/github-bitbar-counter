@@ -42,17 +42,26 @@ export default (config) => (...githubQueries) => {
   )
 
   const showHeader = (...results) => ({
-      text: results.map(r => r.total_count).join('|'),
+    text: results.map(r => r.total_count).join('.'),
     emojize: true,
     color: BLUE,
     image: GITHUB_ICON,
   });
 
+  const nameEmojiMap = {
+    'BACKLOG': '📥',
+    'TODO': '🕒',
+    'DOING': '🚴',
+    'TO REVIEW': '👀',
+    'IN REVIEW': '👀',
+    'DONE': '✅',
+    'ICEBOX': '😕',
+  };
+
   const showCount = ({ name = '', ...query }) => ({ total_count: t }) => ({
-    text: `${name}: ${t}`,
+    text: `${nameEmojiMap[name] || ''} ${name}: ${t}`,
     emojize: true,
     color: (t > 0 && t < 20) ? (t < 5 ? GREEN : (t < 9 ? BLUE : (t < 13 ? ORANGE : RED))) : PURPLE,
-    image: GITHUB_ICON,
     href: makeWebUrl(query)
   });
 
